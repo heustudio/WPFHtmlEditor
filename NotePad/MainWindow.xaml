@@ -1,0 +1,113 @@
+﻿<Window x:Class="NotePad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DockPanel>
+            <Grid DockPanel.Dock="Top">
+                <ToolBar>
+                    <Button Name="btn_Bold" Width="20" VerticalAlignment="Stretch" Click="btn_Bold_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_bold.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_italic" Width="20" Height="20" Click="btn_italic_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_italic.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_underline" Width="20" Height="20" Click="btn_underline_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_underline.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_delete" Width="20" Height="20" Click="btn_delete_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_delete.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Separator />
+                    <Button Name="btn_left" Width="20" Height="20" Click="btn_left_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_left.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_center" Width="20" Height="20" Click="btn_center_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_center.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_right" Width="20" Height="20" Click="btn_right_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_right.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_justify" Width="20" Height="20" Click="btn_justify_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_justify.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Separator />
+                    <Button Name="btn_foreground" Width="20" Height="20" Click="btn_foreground_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_foreground.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_background" Width="20" Height="20" Click="btn_background_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_background.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Separator />
+                    <ComboBox Name="cb_fontFamily" Width="100" SelectionChanged="cb_fontFamily_SelectionChanged">
+                        <ComboBoxItem>arial</ComboBoxItem>
+                        <ComboBoxItem>Microsoft Yahei</ComboBoxItem>
+                        <ComboBoxItem>楷体</ComboBoxItem>
+                        <ComboBoxItem>黑体</ComboBoxItem>
+                        <ComboBoxItem>隶书</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="cb_fontSize" Width="50" SelectionChanged="cb_fontSize_SelectionChanged">
+                        <ComboBoxItem>10px</ComboBoxItem>
+                        <ComboBoxItem>12px</ComboBoxItem>
+                        <ComboBoxItem>14px</ComboBoxItem>
+                        <ComboBoxItem>16px</ComboBoxItem>
+                        <ComboBoxItem>18px</ComboBoxItem>
+                        <ComboBoxItem>20px</ComboBoxItem>
+                        <ComboBoxItem>24px</ComboBoxItem>
+                    </ComboBox>
+                    <Separator />
+                    <Button Name="btn_img" Width="20" Height="20" Click="btn_img_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_img.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_multi_img" Width="20" Height="20" Click="btn_multi_img_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_multi_img.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_video" Width="20" Height="20" Click="btn_video_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_video.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Name="btn_music" Width="20" Height="20" Click="btn_music_Click" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="resource/icons_music.png"/>
+                        </Button.Background>
+                    </Button>
+                </ToolBar>
+            </Grid>
+            <Grid DockPanel.Dock="Bottom">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btn_showText" Width="100" Height="30" Content="Text" Click="btn_showText_Click" />
+                    <Button Name="btn_showHtml" Width="100" Height="30" Content="Html" Click="btn_showHtml_Click" />
+                    <Button Name="btn_count" Width="100" Height="30" Content="count" Click="btn_count_Click" />
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <RichTextBox Name="rtb_content"></RichTextBox>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>
